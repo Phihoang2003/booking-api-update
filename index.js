@@ -11,7 +11,7 @@ import roomRoute from "./routes/room.js";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 8800;
 
 const connect = async () => {
   try {
@@ -26,9 +26,6 @@ app.use(cors())
 app.use(cookieParser());
 
 app.use(express.json());
-app.use("/",(req,res)=>{
-  res.send("Welcome to server home page")
-})
 app.use("/api/auth", authRoute);
 app.use("/api/hotel", hotelRoute);
 app.use("/api/user", userRoute);
