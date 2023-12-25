@@ -26,14 +26,14 @@ app.use(cors())
 app.use(cookieParser());
 
 app.use(express.json());
-
+app.use("/",(req,res)=>{
+  res.send("Welcome to server home page")
+})
 app.use("/api/auth", authRoute);
 app.use("/api/hotel", hotelRoute);
 app.use("/api/user", userRoute);
 app.use("/api/room", roomRoute); 
-app.use("/",(req,res)=>{
-  res.send("Welcome to server home page")
-})
+
 
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
