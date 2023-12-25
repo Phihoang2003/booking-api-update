@@ -11,7 +11,7 @@ import roomRoute from "./routes/room.js";
 dotenv.config();
 
 const app = express();
-const port = 8800;
+const port = 3000;
 
 const connect = async () => {
   try {
